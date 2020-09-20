@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Website</title>
+	<!-- <link rel = "icon" href ="images/logo.png" type = "image/x-icon"> -->
+	<!-- fa fa icon -->
+	<script src="https://use.fontawesome.com/f0c184aaab.js"></script>
+	<!-- animation -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+	<!-- bootstrap.css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body id="body">
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark py-2">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="images/logo.png" style="width: 70px;">
+				</a>
+				
+
+				<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+					<ul class="navbar-nav mx-auto">
+						<li class="nav-item active">
+							<form>
+								<input type="submit" class="btn logout" value="logout">
+							</form>
+						</li>
+					</ul>
+					<button class="navbar-toggler" type="button" onclick="openNav()">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<!-- </div> -->
+			</div>
+			<form class="form-inline mx-auto mx-lg-0 my-2 my-lg-0">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search...">
+					<div class="input-group-append">
+						<button class="input-group-text">
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
+				</div>
+			</form>
+		</nav>
+	</header>
+
+	<section class="wapper">
+		<!-- <div class="row"> -->
+			<!-- sidebar -->
+			<div class="sidenav" id="mySidenav">
+				<div class="sidenav-content text-center">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+						&times;
+					</a>
+					<a href="#">ADD PATIENT</a>
+					<a href="#">CONSOLING CHARGE</a>
+					<a href="#">CHANGE PASSWORD</a>
+				</div>
+			</div>
+			<!-- <div class="col-lg-9 p-0 m-0 border"> -->
+				<!-- contant -->
+				<div class="mainpart">
+					<h2>Animated sidebar Example</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				</div>
+				<!-- </div> -->
+				<!-- </div> -->
+			</section>	
+
+			<!-- bootstrap -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/popper.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<!-- waypoints -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+			// scroll animatiion
+			$('.banner').waypoint(function(direction){
+				$('.banner').addClass('animate__animated animate__fadeInUp')
+			},{
+				offset: '100%'
+			})
+			$('.our-key-features').waypoint(function(direction){
+				$('.our-key-features').addClass('animate__animated animate__fadeInUp')
+			},{
+				offset: '80%'
+			})
+
+		});
+				const openNav = () => {
+					document.getElementById('mySidenav').style.width ="270px";
+					document.getElementById('body').style.overflow ="hidden";
+				}
+				const closeNav = () => {
+					document.getElementById('mySidenav').style.width ="0px";
+					document.getElementById('body').style.overflow ="auto";
+				}
+			</script>
+		</body>
+		</html>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Fredericka+the+Great&display=swap');
+*{font-family: 'Montserrat', sans-serif;}
+h1,h2,h3,h4,h5,h6{margin: 0;padding: 0;}
+
+#body{
+	overflow: auto;
+	background: url('../images/doctor.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	/*background-position: center;*/
+}
+/*nav*/
+header{
+	background: rgba(0, 0, 0, 0.75);
+}
+.menulines{
+	display: none;
+	color: #fff;
+	font-size: 30px;
+	cursor: pointer;
+	margin-right: 50px;
+}
+.logout {
+	color: #fff;
+	position: relative;
+	border: solid;
+	transition: 0.3s;
+}
+.logout:hover{
+	background: red;
+	color: #fff;
+	border: solid red;
+}
+.input-group-text{
+	background: transparent !important;
+	color: #fff !important;
+
+}
+/*sidebar*/
+.sidenav{
+	position: fixed;
+	top: 70px;
+	left: 0;
+	width: 270px;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.75) !important;
+	overflow-x: hidden;
+	/*padding-top: 15px;*/
+	transition: 0.3s;
+}
+.sidenav-content{
+	position: relative;
+	padding: 20px;
+}
+.sidenav-content a{
+	text-decoration: none;
+	font-size: 20px;
+	color: #fff;
+	display: block;
+	padding: 30px 0;
+	margin: 5px 0;
+	transition: all 0.3s;
+}
+.sidenav-content a:hover{
+	background: #fff;
+	color: #000;
+}
+.closebtn{
+	display: none !important;
+	position: absolute;
+	top: -40px;
+	right: 25px;
+	font-size: 40px !important;
+	text-decoration: none;
+	margin: 0 !important;
+	padding: -10px 10px !important;
+}
+.closebtn:hover{
+	background: transparent !important;
+	color: #fff !important;
+}
+/*contant*/
+.mainpart{
+	margin: 0 0 0 270px;
+	padding: 50px;
+	/*border: solid;*/
+}
+/*responsive*/
+@media only screen and (max-width: 992px){
+	/*nav*/
+	.menulines{display: block;}
+	.closebtn{display: block !important;}
+	/*sidebar*/
+	.sidenav{
+		padding-top: 15px;
+		width: 0;
+		top: 125px;
+	}
+	/*contant*/
+	.mainpart{margin: 0;}
+
+}
